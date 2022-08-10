@@ -1,0 +1,68 @@
+.page {
+    height: 100vh;
+    width: 100vw;
+    background-color: #EAECDF;
+}
+
+.container {
+    margin: 2rem;
+    padding: 0 2rem;
+    border: 1px solid #CDCAED;
+    border-radius: 10px;
+    background: #EAECDF;
+    box-shadow: -2px 2px 4px #6E6A63;
+}
+
+.header {
+    margin:0 0 10px 0;
+    background: #EAECDF;
+    border: none;
+    border-bottom: 1px solid #CDCAED;
+    box-shadow: -2px 2px 4px #6E6A63;
+}
+
+.tableContainer {
+    margin: 1rem;
+    padding: 5px;
+    border: 1px solid #CDCAED;
+}
+
+.tableContainer table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 50%;
+    border: none;
+}
+
+.tableContainer button {
+    width: 100%;
+    text-align: left;
+    background-color: #EAECDF;
+    color: black;
+    border: 1px solid #CDCAED;
+    padding: 5px;
+}
+.tableContainer button:hover {
+    background-color: #CDCAED;
+    border-color: #6E6A63;
+}
+.tableContainer button:active {
+    background-color: #EAECDF;
+}
+
+.tableContainer td {
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+}
+
+
+.tableHead {
+    font-size: 1rem;
+    background-color: #CDCAED;
+    width:100%;
+}
+
+#tasks {
+    margin: 0 0 400px 0;
+}
