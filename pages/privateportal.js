@@ -7,7 +7,7 @@ function PrivatePortal() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
-                <Image src={logo} alt="EmpiCode" width={235.5} height={71}></Image>
+                <Image src={logo} alt="EmpiCode" width={235.5} height={71} unoptimized={true}></Image>
             </header>
             <main className={styles.container}>
                 <div>
