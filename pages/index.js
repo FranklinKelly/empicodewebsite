@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Image src={logo} alt="EmpiCode" unoptimized={true}/>
+        <Image src={logo} alt="EmpiCode"/>
         <Link href="/privateportal">Open private portal</Link>
         <h1 className={styles.title}>
           Welcome to EmpiCode!
