@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import logo from '../public/empicode logo.png';
 
@@ -13,8 +14,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Image src={logo}/>
-        <a href="/privateportal">Open private portal</a>
+        <Image src={logo} alt="EmpiCode"/>
+        <Link href="/privateportal">Open private portal</Link>
         <h1 className={styles.title}>
           Welcome to EmpiCode!
         </h1>
