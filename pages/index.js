@@ -18,7 +18,7 @@ export default function Home() {
             Welcome to EmpiCode!
           </h1>
           <br></br>
-        <a href="/privateportal"><button className={styles.card}>Open private portal</button></a>
+        <Link href="/privateportal"><button className={styles.card}>Open private portal</button></Link>
       </header>
       <main className={styles.main}>
         <p className={styles.about}>
