@@ -1,11 +1,17 @@
 import styles from '../styles/privateportal.module.css';
 import Image from 'next/image';
 import logo from '../public/empicode logo.png';
+import Head from 'next/head';
 
 
 function PrivatePortal() {
     return (
         <div className={styles.page}>
+            <Head>
+                <title>EmpiCode</title>
+                <meta name="description" content="A team based on the Island of Empirion" />
+                <link rel="icon" href="/favicon.png" />
+            </Head>
             <header className={styles.header}>
                 <Image src={logo} alt="EmpiCode" width={235.5} height={71}></Image>
             </header>
