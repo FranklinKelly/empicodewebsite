@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import {useRouter} from 'next/router';
 import styles from '../styles/Home.module.css';
 import logo from '../public/empicode logo.png';
 
@@ -25,7 +24,9 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <p className={styles.about}>
-          EmpiCode is a team of experienced developers based in Island of Empirion. <br/>Our developers are dedicated to <strong>safe, secure, and efficient solutions</strong> to your problems.
+          EmpiCode is a team of experienced developers based in Island of Empirion. 
+          <br/>Our developers are dedicated to <strong>safe, secure, and efficient solutions</strong> to your problems.
+          <br/><a><Link href='/team'>Meet the team!</Link></a>
         </p>
       </main>
 
