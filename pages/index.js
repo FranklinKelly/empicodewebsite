@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 import styles from '../styles/Home.module.css';
 import logo from '../public/empicode logo.png';
 
 export default function Home() {
+  const link = '/privateportal/333133/ton/crs/Home/'
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +21,7 @@ export default function Home() {
             Welcome to EmpiCode!
           </h1>
           <br></br>
-        <Link href="/privateportal"><button className={styles.card}>Open private portal</button></Link>
+        <Link href={link}><button className={styles.card}>Open private portal</button></Link>
       </header>
       <main className={styles.main}>
         <p className={styles.about}>
