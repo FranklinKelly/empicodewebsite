@@ -12,7 +12,7 @@ function Timesheet() {
                 <div className={styles.tableContainer}>
                     <div className={styles.tableHead}><td><strong>EmpiCompiler</strong></td></div>
                     <form className={styles.tasks}>
-                        <td><label for='cmd'>Compiler Cmd</label></td>
+                        <td><label htmlFor='cmd'>Compiler Cmd</label></td>
                         <td><input type='text' name='cmd'/></td>
                     </form>
                     <Link href='../Home'><td><button>Back</button></td></Link>
