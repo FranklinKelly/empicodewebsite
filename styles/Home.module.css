@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.main h1 {
+  text-align: center;
+}
+
 .footer {
   display: flex;
   flex: 1;
@@ -66,7 +70,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .card {
@@ -107,6 +111,9 @@
   margin: 100px 50px;
   text-align: center;
 }
+.about a {
+  text-decoration: underline;
+}
 
 .header {
   justify-content: center;
@@ -116,6 +123,24 @@
   margin: 0;
   padding: 10vw;
 }
+
+.teamMemberCard {
+  padding: 10px;
+  margin: 20px 10px;
+  background-color: #101011;
+  border-radius: 10px;
+  table-layout:fixed;
+  text-align: left;
+}
+.teamMemberCard tr td {
+  margin: 10px;
+  padding: 10px;
+}
+
+.teamCardImage {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
