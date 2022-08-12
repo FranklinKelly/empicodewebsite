@@ -4,23 +4,142 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import logo from '../public/empicode logo.png';
 
-function teamMember(pic, name, number,text) {    
+
+function teamMember(teamMemberObject) {    
     return (
         <table className={styles.teamMemberCard}>
-            <tr>
-                <td className={styles.teamCardImage}><Image src={pic} alt='team member face' width={200} height={200}></Image></td>
-                <td className={styles.teamCardText}>
-                    <h2>{name}</h2>
-                    <h4>{number}</h4>
-                    <p>{text}</p>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td className={styles.teamCardImage}><Image src={teamMemberObject.photo} alt='team member face' width={200} height={200}></Image></td>
+                    <td className={styles.teamCardText}>
+                        <h2>{teamMemberObject.name}</h2>
+                        <h4>{teamMemberObject.number}</h4>
+                        <p>{teamMemberObject.bio}</p>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     );
 }
 
 export default function Team() {
     const link = '/privateportal/333133/ton/crs/Home/'
+    const members = {
+        campbell : {
+            name: 'Reagan Campbell',
+            photo: '/teamphotos/campbell.png',
+            number: '991-268-1104',
+            bio: ''
+        },
+        gwynn : {
+            name: 'Thomas Gwynn',
+            photo: '/teamphotos/gwynn.jpg',
+            number: '991-268-1103',
+            bio: ''
+        },
+        mays : {
+            name: 'Wilma Mays',
+            photo: '/teamphotos/mays.jpg',
+            number: '991-268-1102',
+            bio: ''
+        },
+        park : {
+            name: 'Maxwell Park',
+            photo: '/teamphotos/park.jpg',
+            number: '991-268-1101',
+            bio: ''
+        },
+        robinson : {
+            name: 'Jacqueline Robinson', 
+            photo: '/teamphotos/robinson.jfif',
+            number: '991-268-1105',
+            bio: ''
+        },
+        kamalnathan : {
+            name: 'Jasmine Kamalnathan',
+            photo: '/teamphotos/kamalnathan.jpg',
+            number: '991-268-1106',
+            bio: ''
+        },
+        muldrow : {
+            name: 'Nasier Muldrow',
+            photo: '/teamphotos/muldrow.jpg',
+            number: '991-268-1109',
+            bio: ''
+        },
+        mundell : {
+            name: 'Gil Mundell',
+            photo: '/teamphotos/garmoe.jfif',
+            number: '991-268-1107',
+            bio: ''
+        },
+        tiernee : {
+            name: 'Jo Tiernee',
+            photo: '/teamphotos/Jacob Tierney.jpg',
+            number: '991-268-1108',
+            bio: ''
+        },
+        young : {
+            name: 'Loretta Young',
+            photo: '/teamphotos/young.jpg',
+            number: '991-268-1110',
+            bio: ''
+        },
+        lange : {
+            name: 'Stevie Lange',
+            photo: '/teamphotos/lange.jfif',
+            number: '991-268-1111',
+            bio: ''
+        },
+        steinberg : {
+            name: 'Rebecca Steinberg',
+            photo: '/teamphotos/steinberg.jpg',
+            number: '991-268-1112',
+            bio: ''
+        },
+        zheng : {
+            name: 'Mandy Zheng',
+            photo: '/teamphotos/zheng.jpg',
+            number: '991-268-1113',
+            bio: ''
+        },
+        azari : {
+            name: 'Terry Azari', 
+            photo: '/teamphotos/azari.png',
+            number: '991-286-1115',
+            bio: ''
+        },
+        garmoe : {
+            name: 'Barry Garmoe',
+            photo: '/teamphotos/garmoe.png',
+            number: '991-268-1114',
+            bio: ''
+        },
+        gaskins : {
+            name: 'Sammy Gaskins',
+            photo: '/teamphotos/gaskins.png',
+            number: '991-268-1116',
+            bio: ''
+        },
+        lee : {
+            name: 'Fenix Lee',
+            photo: '/teamphotos/lee.jpg',
+            number: '991-268-1117',
+            bio: ''
+        },
+        moon : {
+            name: 'Andrew Moon',
+            photo: '/teamphotos/moon.jpg',
+            number: '991-268-1119',
+            bio: ''
+        },
+        fields : {
+            name: 'Zachary Fields',
+            photo: '/teamphotos/fields.jpg',
+            number: '991-268-1118',
+            bio: ''
+        }
+    }
   
     return (
       <div className={styles.container}>
@@ -39,41 +158,41 @@ export default function Team() {
         <main className={styles.main}>
             <h1>Executives</h1> 
             <div className={styles.grid}>
-                {teamMember('/../public/campbell.png', 'Reagan Campbell', '991-268-1104', '')}
-                {teamMember('/../public/gwynn.jpg', 'Thomas Gwynn', '991-268-1103', '')}
-                {teamMember('/../public/mays.jpg', 'Wilma Mays', '991-268-1102', '')}
-                {teamMember('/../public/park.jpg', 'Maxwell Park', '991-268-1101', '')}
-                {teamMember('/../public/robinson.jfif', 'Jacqueline Robinson', '991-268-1105', '')}
+                {teamMember(members.campbell)}
+                {teamMember(members.gwynn)}
+                {teamMember(members.mays)}
+                {teamMember(members.park)}
+                {teamMember(members.robinson)}
             </div>
             
             <h1>Programmers</h1> 
             <div className={styles.grid}>
-                {teamMember('/../public/kamalnathan.jpg', 'Jasmine Kamalnathan', '991-268-1106', '')}
-                {teamMember('/../public/muldrow.jpg', 'Nasier Muldrow', '991-268-1109', '')}
-                {teamMember('/../public/garmoe.jfif', 'Gil Mundell', '991-268-1107', '')}
-                {teamMember('/../public/Jacob Tierney.jpg', 'Jo Tiernee', '991-268-1108', '')}
-                {teamMember('/../public/young.jpg', 'Loretta Young', '991-268-1110', '')}
+                {teamMember(members.kamalnathan)}
+                {teamMember(members.muldrow)}
+                {teamMember(members.mundell)}
+                {teamMember(members.tiernee)}
+                {teamMember(members.young)}
             </div>
             
             <h1>Digital Art And Design</h1>
             <div className={styles.grid}>
-                {teamMember('/../public/lange.jfif', 'Stevie Lange', '991-268-1111', '')}
-                {teamMember('/../public/steinberg.jpg', 'Rebecca Steinberg', '991-268-1112', '')}
-                {teamMember('/../public/zheng.jpg', 'Mandy Zheng', '991-268-1113', '')}
+                {teamMember(members.lange)}
+                {teamMember(members.steinberg)}
+                {teamMember(members.zheng)}
             </div>
 
             <h1>Information Technology</h1>
             <div className={styles.grid}>
-                {teamMember('/../public/azari.png', 'Terry Azari', '991-268-1115', '')}
-                {teamMember('/../public/garmoe.png', 'Barry Garmoe', '991-268-1114', '')}
-                {teamMember('/../public/gaskins.png', 'Sammy Gaskins', '991-268-1116', '')}
+                {teamMember(members.azari)}
+                {teamMember(members.garmoe)}
+                {teamMember(members.gaskins)}
             </div>
 
             <h1>Support Staff</h1>
             <div className={styles.grid}>
-                {teamMember('/../public/lee.jpg', 'Fenix Lee', '991-268-1117', '')}
-                {teamMember('/../public/moon.jpg', 'Andrew Moon', '991-268-1119', '')}
-                {teamMember('/../public/fields.jpg', 'Zachary Fields', '991-268-1118', '')}
+                {teamMember(members.lee)}
+                {teamMember(members.moon)}
+                {teamMember(members.fields)}
             </div>
         </main>
   
