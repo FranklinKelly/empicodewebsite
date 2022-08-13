@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-import logo from '../public/empicode logo.png';
+
 
 export default function Home() {
   const link = '/privateportal/333133/ton/crs/Home/'
@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <header className={styles.header}>
-          <Image src={logo} alt="EmpiCode"/>
+          <Image src='/empicode logo.png' alt="EmpiCode" width={235.5} height={72}/>
           <h1 className={styles.title}>
             Welcome to EmpiCode!
           </h1>
@@ -24,7 +24,7 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <p className={styles.about}>
-          EmpiCode is a team of experienced developers based in Island of Empirion. 
+          EmpiCode is a team of experienced developers based in the Island of Empirion. 
           <br/>Our developers are dedicated to <strong>safe, secure, and efficient solutions</strong> to your problems.
           <br/><a><Link href='/team'>Meet the team!</Link></a>
         </p>

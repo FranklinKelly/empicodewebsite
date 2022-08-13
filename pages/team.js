@@ -22,6 +22,22 @@ function teamMember(teamMemberObject) {
     );
 }
 
+function teamMemberGroup(groupLabel, groupNames) {
+    let elements;
+    for (let i = 0; i < groupNames.length; i++) {
+        elements = <>{elements}{teamMember(groupNames[i])}</>
+    }
+    
+    return (
+        <div>
+            <h1>{groupLabel}</h1>
+            <div className={styles.grid}>
+                {elements}
+            </div>
+        </div>
+    )
+}
+
 export default function Team() {
     const link = '/privateportal/333133/ton/crs/Home/'
     const members = {
@@ -156,44 +172,11 @@ export default function Team() {
             <br></br>
         </header>
         <main className={styles.main}>
-            <h1>Executives</h1> 
-            <div className={styles.grid}>
-                {teamMember(members.campbell)}
-                {teamMember(members.gwynn)}
-                {teamMember(members.mays)}
-                {teamMember(members.park)}
-                {teamMember(members.robinson)}
-            </div>
-            
-            <h1>Programmers</h1> 
-            <div className={styles.grid}>
-                {teamMember(members.kamalnathan)}
-                {teamMember(members.muldrow)}
-                {teamMember(members.mundell)}
-                {teamMember(members.tiernee)}
-                {teamMember(members.young)}
-            </div>
-            
-            <h1>Digital Art And Design</h1>
-            <div className={styles.grid}>
-                {teamMember(members.lange)}
-                {teamMember(members.steinberg)}
-                {teamMember(members.zheng)}
-            </div>
-
-            <h1>Information Technology</h1>
-            <div className={styles.grid}>
-                {teamMember(members.azari)}
-                {teamMember(members.garmoe)}
-                {teamMember(members.gaskins)}
-            </div>
-
-            <h1>Support Staff</h1>
-            <div className={styles.grid}>
-                {teamMember(members.lee)}
-                {teamMember(members.moon)}
-                {teamMember(members.fields)}
-            </div>
+            {teamMemberGroup('Executives',[members.campbell, members.gwynn, members.mays, members.park, members.robinson])}
+            {teamMemberGroup('Programmers',[members.kamalnathan, members.muldrow, members.mundell, members.tiernee, members.young])}
+            {teamMemberGroup('Digital Art And Design',[members.lange, members.steinberg, members.zheng])}
+            {teamMemberGroup('Information Technology',[members.azari, members.garmoe, members.gaskins])}
+            {teamMemberGroup('Staff',[members.lee, members.moon, members.fields])}
         </main>
   
         <footer className={styles.footer}>
@@ -203,3 +186,44 @@ export default function Team() {
     )
   }
   
+
+/*
+<h1>Executives</h1> 
+<div className={styles.grid}>
+    {teamMember(members.campbell)}
+    {teamMember(members.gwynn)}
+    {teamMember(members.mays)}
+    {teamMember(members.park)}
+    {teamMember(members.robinson)}
+</div>
+
+<h1>Programmers</h1> 
+<div className={styles.grid}>
+    {teamMember(members.kamalnathan)}
+    {teamMember(members.muldrow)}
+    {teamMember(members.mundell)}
+    {teamMember(members.tiernee)}
+    {teamMember(members.young)}
+</div>
+
+<h1>Digital Art And Design</h1>
+<div className={styles.grid}>
+    {teamMember(members.lange)}
+    {teamMember(members.steinberg)}
+    {teamMember(members.zheng)}
+</div>
+
+<h1>Information Technology</h1>
+<div className={styles.grid}>
+    {teamMember(members.azari)}
+    {teamMember(members.garmoe)}
+    {teamMember(members.gaskins)}
+</div>
+
+<h1>Support Staff</h1>
+<div className={styles.grid}>
+    {teamMember(members.lee)}
+    {teamMember(members.moon)}
+    {teamMember(members.fields)}
+</div>
+*/
